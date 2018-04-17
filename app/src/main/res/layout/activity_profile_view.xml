@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/reback1"
     tools:context="com.aelleon.ux.ProfileView"
     tools:layout_editor_absoluteY="25dp">
 
@@ -77,6 +78,7 @@
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.052083332" />
     <TextView
+        android:textColor="#FFFFFF"
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -88,6 +90,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
+        android:textColor="#FFFFFF"
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -99,6 +102,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
+        android:textColor="#FFFFFF"
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -110,6 +114,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
+        android:textColor="#FFFFFF"
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

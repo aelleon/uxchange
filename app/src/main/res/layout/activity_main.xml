@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/back1"
+    android:background="@drawable/reback1"
     tools:context="com.aelleon.ux.MainActivity"
 
     >
@@ -17,6 +17,7 @@
         android:text="Welcome!"
         android:textAlignment="center"
         android:textSize="50sp"
+        android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"

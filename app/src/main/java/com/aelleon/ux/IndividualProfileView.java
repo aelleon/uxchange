@@ -1,5 +1,6 @@
 package com.aelleon.ux;
 
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
@@ -42,12 +43,25 @@ public class IndividualProfileView extends AppCompatActivity {
         if(requestCode == REQUEST_IMAGE && resultCode == RESULT_OK) {
             Bundle extra = data.getExtras();
             Bitmap bitmap = (Bitmap)extra.get("data");
-            Drawable color = new ColorDrawable(0000);
-            Drawable image = getResources().getDrawable(R.drawable.back1);
+
+            Bitmap resize = scaleDownBitmap(bitmap, 50, this);//            Drawable color = new ColorDrawable(0000);
+            //Drawable image = getResources().getDrawable(R.drawable.back1);
+            Drawable image = new BitmapDrawable(getResources(), resize);
             LayerDrawable ld = new LayerDrawable(new Drawable[]{color, image});
             profileView.setImageDrawable(ld);
-           // profile_image.setBackground(new BitmapDrawable(getResources(), bitmap));
+//            profileView.setBackground(new BitmapDrawable(getResources(), resize));
         }
+    }
+    public static Bitmap scaleDownBitmap(Bitmap photo, int newHeight, Context context) {
+
+        final float densityMultiplier = context.getResources().getDisplayMetrics().density;
+
+        int height= (int) (newHeight*densityMultiplier);
+        int weight= (int) (height * photo.getWidth()/((double) photo.getHeight()));
+
+        photo=Bitmap.createScaledBitmap(photo, weight, height, true);
+
+        return photo;
     }
 
 }
