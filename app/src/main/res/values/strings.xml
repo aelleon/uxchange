@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">ux</string>
+    <string name="title_activity_profile_view">ProfileView</string>
+</resources>
